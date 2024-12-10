@@ -11,6 +11,10 @@ path = "bin/server.rs"
 name = "client"
 path = "bin/client.rs"
 
+[[bin]]
+name = "echo-server-copy"
+path = "bin/echo-server-copy.rs"
+
 [dependencies]
 bytes = "1.9.0"
 mini-redis = "0.4.1"
