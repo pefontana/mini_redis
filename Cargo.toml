@@ -5,17 +5,17 @@ edition = "2021"
 
 [[bin]]
 name = "server"
-path = "bin/server.rs"
+path = "src/bin/server.rs"
 
 [[bin]]
 name = "client"
-path = "bin/client.rs"
+path = "src/bin/client.rs"
 
 [[bin]]
 name = "echo-server-copy"
-path = "bin/echo-server-copy.rs"
+path = "src/bin/echo-server-copy.rs"
 
 [dependencies]
 bytes = "1.9.0"
-mini-redis = "0.4.1"
-tokio = {version = "1.41.1", features = ["full"]}
+redis = { package = "mini-redis", version = "0.4.1" }
+tokio = { version = "1.41.1", features = ["full"] }

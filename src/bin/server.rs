@@ -1,7 +1,10 @@
 use bytes::Bytes;
-use mini_redis::{client, Connection, Frame, Result};
+use mini_redis::connection::Connection;
+
 use tokio::net::TcpStream;
 
+use redis::Command::{self, Get, Set};
+use redis::Frame;
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 use tokio::net::TcpListener;
@@ -29,8 +32,6 @@ async fn main() {
 }
 
 async fn process(socket: TcpStream, db: Db) {
-    use mini_redis::Command::{self, Get, Set};
-
     // A hashmap is used to store data
     // let mut db = HashMap::new();
 

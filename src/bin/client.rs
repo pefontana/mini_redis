@@ -6,7 +6,7 @@ enum Command {
     Set { key: String, val: Bytes },
 }
 
-use mini_redis::client;
+use redis::client;
 use tokio::sync::mpsc;
 
 #[tokio::main]
